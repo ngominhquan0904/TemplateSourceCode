@@ -24,8 +24,9 @@ namespace TemplateSourceCode.Controllers
         {
             UserManager = userManager;
 
-            //fsffsaaaaaaaaaaaaaa
+            //fsffsaaaaaaaaaaaaaabbbbbb
             //ngo minh quan
+            //fkdsfjslfjsf
         }
 
         public UserManager<ApplicationUser> UserManager { get; private set; }

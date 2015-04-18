@@ -24,6 +24,7 @@ namespace TemplateSourceCode.Controllers
         {
             UserManager = userManager;
 
+            //fsfs
         }
 
         public UserManager<ApplicationUser> UserManager { get; private set; }

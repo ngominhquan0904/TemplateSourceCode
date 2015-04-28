@@ -14,6 +14,8 @@
         <script src="~/Scripts/jquery.dataTables.js"></script>
         <script src="~/Scripts/bootstrap.min.js"></script>
         <script>
+           
+          
             $(document).ready(function (){
                 $("#basicExample").DataTable({stateSave : true});
                 $("#FeatureExample").DataTable({
@@ -26,11 +28,11 @@
                 });
                 $("#HiddenColumn").append($('#basicExample').html()).DataTable({
                     "columnDefs" : [
-                    {
-                        "targets": [2],
-                        "visible": false,
-                        "searchable" :false
-                    },
+                        {
+                            "targets": [2],
+                            "visible": false,
+                            "searchable" :false
+                        },
                         {
                             "targets": [1, 2, 3, 4, 5],
                             "searchable" : false
@@ -48,15 +50,228 @@
                 });
                 // $('#tableStyle').append($('#basicExample').html()).addClass('cell-border compact stripe order-column').DataTable();
                 $('#tableStyle').append($('#basicExample').html()).addClass('table table-striped table-bordered').DataTable();
+                $('#advanceEvent').append($('#basicExample').html()).on('search.dt', function () { eventFire('Search'); }).DataTable();
+                $('#columnRender').append($('#basicExample').html()).DataTable(
+                    {
+                        "columnDefs": [
+                        {
+                            "render": function(data, type, row) {
+                                return data + '(' + row[3] + ')';
+                            },
+                            "targets": 0
+                        },
+                        {
+                            "visible": false,
+                            "targets": 3
+                        }],
+                        "lengthMenu": [10, 30, 50, "All"]
+                    }
+                );
+                $('#DomPosition').append($('#basicExample').html()).DataTable({
+                    "dom": '<"top"iflp<"clear">>rt<"bottom"iflp<"clear">>'
+                });
+                $('#language').append($('#basicExample').html()).DataTable({
+                    "language" : {
+                        "url": "//cdn.datatables.net/plug-ins/1.10.6/i18n/Vietnamese.json"
+                    }
+                });
+                $('#settingDefault').append($('#basicExample').html()).DataTable();
+                $('#RowCreatedCallback').append($('#basicExample').html()).DataTable({
+                    "createdRow": function ( row, data, index ) {
+                        if ( data[5].replace(/[\$,]/g, '') * 1 > 150000 ) {
+                            $('td', row).eq(5).addClass('highlight');
+                        }
+                    }
+                    
+                });
+                //row grouping
+                var table = $('#RowGrouping').append($('#basicExample').html()).DataTable({
+                    "columnDefs": [
+                        { "visible": false, "targets": 2 }
+                    ],
+                    "order": [[2, 'asc']],
+                    "displayLength": 25,
+                    "drawCallback": function (settings) {
+                        var api = this.api();
+                        var rows = api.rows({ page: 'current' }).nodes();
+                        var last = null;
+
+                        api.column(2, { page: 'current' }).data().each(function (group, i) {
+                            if (last !== group) {
+                                $(rows).eq(i).before(
+                                    '<tr class="group"><td colspan="5">' + group + '</td></tr>'
+                                );
+
+                                last = group;
+                            }
+                        });
+                    }
+                });
+
+                // Order by the grouping
+                $('#RowGrouping tbody').on('click', 'tr.group', function () {
+                    var currentOrder = table.order()[0];
+                    if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                        table.order([2, 'desc']).draw();
+                    }
+                    else {
+                        table.order([2, 'asc']).draw();
+                    }
+                });
+                //Footer callback
+                $('#FooterCallback').append($('#basicExample').html()).dataTable({
+                    "footerCallback": function (row, data, start, end, display) {
+                        var api = this.api(), data;
+
+                        // Remove the formatting to get integer data for summation
+                        var intVal = function (i) {
+                            return typeof i === 'string' ?
+                                i.replace(/[\$,]/g, '') * 1 :
+                                typeof i === 'number' ?
+                                i : 0;
+                        };
+
+                        // Total over all pages
+                        total = api
+                            .column(5)
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            });
+
+                        // Total over this page
+                        pageTotal = api
+                            .column(5, { page: 'current' })
+                            .data()
+                            .reduce(function (a, b) {
+                                return intVal(a) + intVal(b);
+                            }, 0);
+
+                        // Update footer
+                        $(api.column(5).footer()).html(
+                            '$' + pageTotal + ' ( $' + total + ' total)'
+                        );
+                    }
+                });
+                $('#customToolbar').append($('#basicExample').html()).dataTable({
+                    "dom": '<"toolbar">frtip'
+                });
+
+                $("div.toolbar").html('<b>Custom tool bar! Text/images etc.</b>');
+                var t = $('#addRow').DataTable();
+                var count = 1;
+                $('#btAddRow').on('click', function() {
+                    count++;
+                    t.row.add([
+                        count + '.1',
+                        count + '.2',
+                        count + '.3',
+                        count + '.4'
+                    ]).draw();
+                });
+               
+                // Individual column searching
+                var t2 = $('#individualColumnSearching').append($('#basicExample').html()).DataTable();
+                // Setup - add a text input to each footer cell
+                $('#individualColumnSearching tfoot th').each(function () {
+                    var title = $('#individualColumnSearching thead th').eq($(this).index()).text();
+                    $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+                });
+
+                // Apply the search
+                t2.columns().every(function () {
+                    var that = this;
+
+                    $('input', this.footer()).on('keyup change', function () {
+                        that
+                            .search(this.value)
+                            .draw();
+                    });
+                });
             });
-    
+//            $.extend($.fn.dataTable.defaults, {
+//                "searching": false,
+//                "ordering": false
+//            });
+            function eventFire(type) {
+                var n = $('#demoInfo')[0];
+                n.innerHTML += '<div>' + type + 'even - ' + new Date().getTime() + '</div>';
+                n.scrollTop = n.scrollHeight;
+            }
         </script>
         <style>
             .title {color : red;}
             div.container{width:40%}
+            td.highlight {
+                font-weight: bold;
+                color: blue;
+            }
+            tr.group,
+            tr.group:hover {
+                background-color: #ddd !important;
+            }
+            th {
+                white-space: nowrap;
+            }
+            tfoot input {
+                width: 100%;
+                padding: 3px;
+                box-sizing: border-box;
+            }
         </style>
     </head>
     <body>
+        <label class="title">API-Individual column searching</label>
+        <table id="individualColumnSearching" class="display" cellspacing="0" width="100%">
+        </table>
+        <label class="title">API-AddRow</label>
+        <button id="btAddRow">Add Row</button>
+        <table id="addRow">
+            <thead>
+                <tr>
+                    <th>Column1</th>
+                    <th>Column2</th>
+                    <th>Column3</th>
+                    <th>Column4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.1</td>
+                    <td>1.2</td>
+                    <td>1.3</td>
+                    <td>1.4</td>
+                </tr>
+            </tbody>
+        </table>
+        <label class="title">Advance-CustomToobar</label>
+        <table id="customToolbar">
+            
+        </table>
+        <label class="title">Advance-FooterCallback</label>
+        <table id="FooterCallback">
+            <tfoot>
+                <tr>
+                    <th colspan="5" style="text-align:right">Total:</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+        </table>
+        <label class="title">Advance-Row grouping</label>
+        <table id="RowGrouping"></table>
+        <label class="title">Advance-RowCreatedCallback</label>
+        <table id="RowCreatedCallback"></table>
+        <label class="title">Advance-Setting Default</label>
+        <table id="settingDefault"></table>
+        <label class="title">Advance-Language</label>
+        <table id="language"></table>
+        <label class="title">Advance - Dom - Multiple table control elements</label>
+        <table id="DomPosition"></table>
+        <label class="title">Advance-column render-page length</label>
+        <table id="columnRender"></table>
+        <label class="title">Advance-Event</label>
+        <div id="demoInfo"></div>
+        <table id="advanceEvent"></table>
         <label class="title">Sytle</label>
         <table id="tableStyle"></table>
         <label class="title">Scroll Vertical</label>
@@ -65,10 +280,8 @@
         <table id="ComplexHeader"></table>
         <label class="title">Hidden Column</label>
         <table id="HiddenColumn"></table>
-        <label class ="title">Default Order</label>
-        <table id="DefaultOrder">
-            
-        </table>
+        <label class="title">Default Order</label>
+        <table id="DefaultOrder"></table>
         <label class="title">feature disable/enable</label>
         <div>
             <table id="FeatureExample">
@@ -85,7 +298,6 @@
                         <td>Position</td>
                         <td>Address</td>
                     </tr>
-
                 </tfoot>
                 <tbody>
                     <tr>
@@ -93,9 +305,8 @@
                         <td>Engineer</td>
                         <td>Newyorks</td>
                     </tr>
-
                 </tbody>
-            </table>   
+            </table>
         </div>
         <label class="title">Zero Configuration</label>
         <div>
@@ -110,7 +321,7 @@
                         <th>Salary</th>
                     </tr>
                 </thead>
- 
+
                 <tfoot>
                     <tr>
                         <th>Name</th>
@@ -121,7 +332,7 @@
                         <th>Salary</th>
                     </tr>
                 </tfoot>
- 
+
                 <tbody>
                     <tr>
                         <td>Tiger Nixon</td>
@@ -580,7 +791,7 @@
                         <td>$112,000</td>
                     </tr>
                 </tbody>
-            </table>   
+            </table>
         </div>
     </body>
 </html>

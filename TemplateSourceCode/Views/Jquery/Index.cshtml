@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var element = $('#sortOption');
+            var options = element.children('option').sort(function(a, b) {
+                if ($(a).text() > $(b).text()) {
+                    return -1;
+                }
+                return 1;
+            });
+            element.empty();
+            element.append(options);
+            //Coloring
+            var old_text = $('#coloring').text();
+            var new_text = old_text.replace("red", "<p style='color:red'>red</p>");
+            new_text = new_text.replace("blue", "<p style='color:blue'>blue</p>");
+            new_text = new_text.replace("green", "<p style='color:green'>green</p>");
+            $('#coloring').empty();
+            $('#coloring').append(new_text);
+            $('#validate input').each(function() {
+                if (!$.isNumeric($(this).val())) {
+                    $(this).css('background-color', 'red');
+                }
+            });
+            var row = $('#moveTableRow tbody').children('tr:first');
+            row.insertAfter(row.next());
+            $('#AddUp tbody tr').each(function () {
+                var element = $(this).children('td');
+                element.eq(4).text(parseInt(element.eq(0).text()) + parseInt(element.eq(2).text()));
+            });
+        });
+    </script>
+</head>
+<body>
+    <select size="4" id="sortOption">
+        <option>aaa</option>
+        <option>ddd</option>
+        <option>ccc</option>
+        <option>bbb</option>
+    </select>
+    <div id="coloring">
+        red blue green
+    </div>
+    <div id="validate">
+        <input type="text" value="123456"/>
+        <input type="text" value="abcde"/>
+        <input type="text" value="ab12"/>
+    </div>
+    <table id="moveTableRow" border="1">
+        <tbody>
+            <tr>
+                <td>row1</td>
+                <td>Let me down!</td>
+            </tr>
+            <tr>
+                <td>
+                    row2
+                </td>
+                <td>Let me up</td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="AddUp">
+        <thead>
+            <tr>
+                <th>Number1</th>
+                <th>Oper</th>
+                <th>Number2</th>
+                <th>Equal</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12</td>
+                <td>+</td>
+                <td>14</td>
+                <td>=</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>+</td>
+                <td>15</td>
+                <td>=</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,11 @@
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\CompostionRoot.dll
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\CompostionRoot.pdb
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Autofac.dll
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Core.dll
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Infrastructure.dll
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Autofac.xml
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Core.pdb
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Infrastructure.pdb
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.csprojResolveAssemblyReference.cache
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.dll
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.pdb

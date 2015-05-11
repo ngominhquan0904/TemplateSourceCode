@@ -10,6 +10,7 @@ namespace CsharpTemplate
     {
         static void Main(string[] args)
         {
+            //
         }
     }
 }

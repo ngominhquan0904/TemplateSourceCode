@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+@*    <script src="~/Scripts/angular.js"></script>*@
+    @*    <script src="~/Scripts/jquery-1.10.2.js"></script>*@
+    @Scripts.Render("~/bundles/Header")
+    <script>
+          @{
+              var request = HttpContext.Current.Request;
+              var appUrl = HttpRuntime.AppDomainAppVirtualPath;
+
+              if (!string.IsNullOrWhiteSpace(appUrl) && appUrl != "/")
+              {
+                  appUrl += "/";
+              }
+              var baseUrl = string.Format("{0}://{1}{2}", request.Url.Scheme, request.Url.Authority, appUrl);
+              baseUrl = baseUrl.Remove(baseUrl.Length - 1);
+          }
+        var baseUrl = '@baseUrl';
+        angular.module('main', [], undefined)
+            .service('HostComunicationService',['$http',function($http) {
+                return {
+                    HostCommunication : function(method,url,input) {
+                        return $http({
+                            method: method,
+                            url: url,
+                            data: input
+                        });
+                    }
+                };
+            }])
+            .controller('mainCrtl', ['$scope', '$http', 'HostComunicationService', function ($scope, $http, HostComunicationService) {
+                    $scope.name = "abc1";
+                    $scope.init = function () {
+                        $scope.name = "112";
+                        HostComunicationService.HostCommunication("POST", baseUrl + "/CSharp/GetData", null)
+                            .success(function(data) {
+                                $scope.name = data;
+                            })
+                            .error(function(data, status) {
+                                $scope.name = "error";
+                        });
+//                        $http({
+//                                method: "POST",
+//                                url: baseUrl+"/CSharp/GetData"
+//                            }).success(function(data) {
+//                                $scope.name = data;
+//                            })
+//                            .error(function() {
+//                                $scope.name = "error";
+//                            });
+//                    $http.
+                    };
+                $scope.test = function() {
+                    alert("haha");
+                };
+            }
+            ]);
+        $(document).ready(function() {
+       
+        });
+        function test() {
+            
+        }
+    </script>
+</head>
+    <body ng-app ="main">
+        <div ng-controller="mainCrtl" ng-init="init()">
+            <div ng-bind="name"></div>
+            <button id="test" ng-click="test()">test</button>
+        </div>
+    </body>
+</html>

@@ -9,3 +9,14 @@ D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debu
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.csprojResolveAssemblyReference.cache
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.dll
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\CompostionRoot.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\CompostionRoot.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Autofac.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Core.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Infrastructure.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Autofac.xml
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Core.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\bin\Debug\Template.CSharp.Infrastructure.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.csprojResolveAssemblyReference.cache
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CompostionRoot\obj\Debug\CompostionRoot.pdb

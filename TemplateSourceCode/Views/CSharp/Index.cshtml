@@ -41,12 +41,27 @@
                     $scope.name = "abc1";
                     $scope.init = function () {
                         $scope.name = "112";
-                        HostComunicationService.HostCommunication("POST", baseUrl + "/CSharp/GetData", null)
-                            .success(function(data) {
-                                $scope.name = data;
-                            })
-                            .error(function(data, status) {
-                                $scope.name = "error";
+//                        HostComunicationService.HostCommunication("POST", baseUrl + "/CSharp/GetData", null)
+//                            .success(function(data) {
+//                                $scope.name = data;
+//                            })
+//                            .error(function(data, status) {
+//                                $scope.name = "error";
+//                                                });
+//                        HostComunicationService.HostCommunication("GET", "http://localhost:15467/RestServiceImpl.svc/DoWork", null)
+//                          .success(function (data) {
+//                                alert("add");
+//                                //$scope.name = data;
+//                            })
+//                          .error(function (data, status) {
+//                              $scope.name = "error";
+                        //                          });
+                        $http.get('http://localhost:15467/RestServiceImpl.svc/DoWork').
+                             success(function (data) {
+                                 $scope.name = data.Name;
+                             })
+                        .error(function(data, status) {
+                            $scope.name = 'error';
                         });
 //                        $http({
 //                                method: "POST",
@@ -64,9 +79,7 @@
                 };
             }
             ]);
-        $(document).ready(function() {
-       
-        });
+      
         function test() {
             
         }

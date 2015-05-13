@@ -7,7 +7,7 @@ namespace Template.CSharp.Infrastructure.ApplicationServices
         public string DelegateDemo()
         {
             //sfjsfjsf
-            //fds
+            //fdsdf
             throw new System.NotImplementedException();
         }
     }

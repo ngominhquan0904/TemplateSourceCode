@@ -20,7 +20,7 @@ namespace WCFRestFullTemplate
             UriTemplate = "xml/{id}")]
         string XMLData(string id);
         [OperationContract]
-        [WebInvoke(Method = "GET",ResponseFormat = WebMessageFormat.Json,BodyStyle = WebMessageBodyStyle.Wrapped,UriTemplate = "DoWork")]
+        [WebInvoke(Method = "GET",RequestFormat = WebMessageFormat.Json,ResponseFormat = WebMessageFormat.Json,UriTemplate = "DoWork")]
         string DoWork();
     }
 }

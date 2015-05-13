@@ -34,10 +34,17 @@
                             url: url,
                             data: input
                         });
-                    }
+                    },
+
                 };
             }])
-            .controller('mainCrtl', ['$scope', '$http', 'HostComunicationService', function ($scope, $http, HostComunicationService) {
+            .service("RESTClientService", function ($http) {
+                //debugger;
+                this.get = function () {
+                    return $http.get("http://localhost:15467/RestServiceImpl.svc/DoWork");
+                };
+            })
+            .controller('mainCrtl', ['$scope', '$http', 'HostComunicationService', 'RESTClientService', function ($scope, $http, HostComunicationService, RESTClientService) {
                     $scope.name = "abc1";
                     $scope.init = function () {
                         $scope.name = "112";
@@ -56,13 +63,19 @@
 //                          .error(function (data, status) {
 //                              $scope.name = "error";
                         //                          });
-                        $http.get('http://localhost:15467/RestServiceImpl.svc/DoWork').
-                             success(function (data) {
-                                 $scope.name = data.Name;
-                             })
-                        .error(function(data, status) {
-                            $scope.name = 'error';
-                        });
+//                        var a = $http.get('http://localhost:15467/RestServiceImpl.svc/DoWork');
+//                        $scope.name = 'bb';
+                        // debugger;
+                        var promiseGet = RESTClientService.get();
+
+                        promiseGet.then(function (pl) {
+                            $scope.Employees = pl.data;
+                            $scope.name = pl.data;
+                            },
+                                  function (errorPl) {
+                                      $scope.name = "error";
+                                  });
+
 //                        $http({
 //                                method: "POST",
 //                                url: baseUrl+"/CSharp/GetData"

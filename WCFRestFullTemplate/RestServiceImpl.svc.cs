@@ -19,8 +19,9 @@ namespace WCFRestFullTemplate
 
         public string DoWork()
         {
-            var product = new Product {Name = "aaa", Address = "bbb"};
-            return JsonConvert.SerializeObject(product);
+//            var product = new Product {Name = "aaa", Address = "bbb"};
+//            return JsonConvert.SerializeObject(product);
+            return "bcd";
         }
     }
     public class Product

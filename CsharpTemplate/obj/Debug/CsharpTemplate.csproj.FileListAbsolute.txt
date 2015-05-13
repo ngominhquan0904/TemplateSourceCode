@@ -1,7 +1,6 @@
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\bin\Debug\CsharpTemplate.exe.config
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\bin\Debug\CsharpTemplate.exe
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\bin\Debug\CsharpTemplate.pdb
-D:\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\obj\Debug\CsharpTemplate.csprojResolveAssemblyReference.cache
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\obj\Debug\CsharpTemplate.exe
 D:\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\obj\Debug\CsharpTemplate.pdb
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\bin\Debug\CsharpTemplate.exe.config

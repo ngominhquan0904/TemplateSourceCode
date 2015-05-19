@@ -58,7 +58,12 @@ namespace CsharpTemplate
 //            CSharpAdvance x = new CSharpAdvance();
 //            x.DelegateTemp();
             
-            Console.ReadLine();
+      CSharpAdvance x = new CSharpAdvance();
+//            x.PluginDelegate();
+//            x.MultiDelegate();
+            x.GenericDelegate();
+      Console.ReadLine();
+
         }
     }
 }

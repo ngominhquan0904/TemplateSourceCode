@@ -63,7 +63,7 @@ namespace CsharpTemplate
 //            x.MultiDelegate();
             x.GenericDelegate();
       Console.ReadLine();
-
+            //
         }
     }
 }

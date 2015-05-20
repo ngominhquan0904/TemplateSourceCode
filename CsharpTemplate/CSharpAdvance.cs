@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CsharpTemplate
 {
@@ -77,6 +80,72 @@ namespace CsharpTemplate
             }
         } 
         #endregion
+        #region Action
 
+        public void BaseAction()
+        {
+            Action<int> action = (int x) => Console.WriteLine("Value {0}", x);
+            action.Invoke(5);
+        }
+
+        public void AdvanceAction()
+        {
+            Dictionary<string,Action> example = new Dictionary<string, Action>();
+            example["cat"] = Cat;
+            example["dog"] = Dog;
+            example["cat"].Invoke();
+            example["dog"].Invoke();
+        }
+
+        static void Cat()
+        {
+            Console.WriteLine("this is Cat");
+        }
+        static void Dog()
+        {
+            Console.WriteLine("this is Dog");
+        }
+        #endregion
+
+        #region Func
+
+        public void BaseFunc()
+        {
+            Func<bool, int, string> message = (b, x) => string.Format("string = {0} and {1}", b, x);
+            Console.WriteLine(message.Invoke(true, 3));
+        }
+
+        #endregion
+        #region Event -- not complete,continue to study
+
+        public delegate void EventHandler();
+        public static  event EventHandler _show;
+        public void BaseEvent()
+        {
+           _show += new EventHandler(Cat);
+            _show += new EventHandler(Dog);
+            _show.Invoke();
+        }
+
+        #endregion
+
+        static Func<int> Natural()
+        {
+//            int seed = 0;
+//            return () => seed++;
+            
+            return () =>
+            {
+                int seed = 0;
+               return seed++;
+            };
+        }
+
+        public void LambdaExpression()
+        {
+            Func<int> natural = Natural();
+            Console.WriteLine(natural());
+            Console.WriteLine(natural());
+        }
     }
 }

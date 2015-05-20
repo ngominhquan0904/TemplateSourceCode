@@ -61,7 +61,12 @@ namespace CsharpTemplate
       CSharpAdvance x = new CSharpAdvance();
 //            x.PluginDelegate();
 //            x.MultiDelegate();
-            x.GenericDelegate();
+//            x.GenericDelegate();
+//            x.BaseAction();
+//            x.AdvanceAction();
+//            x.BaseFunc();
+//            x.BaseEvent();
+            x.LambdaExpression();
       Console.ReadLine();
 
         }

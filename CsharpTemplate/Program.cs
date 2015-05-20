@@ -66,6 +66,7 @@ namespace CsharpTemplate
 //            x.AdvanceAction();
 //            x.BaseFunc();
 //            x.BaseEvent();
+            //
             x.LambdaExpression();
       Console.ReadLine();
 

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FSAFieldDBModelStoreContainer" CdmEntityContainer="FSAFieldDBEntities">
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="FSAFieldDBModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointments">
+          <ScalarProperty Name="appointment_cd" ColumnName="appointment_cd" />
+          <ScalarProperty Name="appointment_number" ColumnName="appointment_number" />
+          <ScalarProperty Name="customer_uid" ColumnName="customer_uid" />
+          <ScalarProperty Name="screening_cd" ColumnName="screening_cd" />
+          <ScalarProperty Name="appt_time" ColumnName="appt_time" />
+          <ScalarProperty Name="app_slot" ColumnName="app_slot" />
+          <ScalarProperty Name="scantron" ColumnName="scantron" />
+          <ScalarProperty Name="no_show" ColumnName="no_show" />
+          <ScalarProperty Name="if_fill" ColumnName="if_fill" />
+          <ScalarProperty Name="inactive" ColumnName="inactive" />
+          <ScalarProperty Name="total_due" ColumnName="total_due" />
+          <ScalarProperty Name="paid" ColumnName="paid" />
+          <ScalarProperty Name="appt_source" ColumnName="appt_source" />
+          <ScalarProperty Name="price_sched_cd" ColumnName="price_sched_cd" />
+          <ScalarProperty Name="discount_cd" ColumnName="discount_cd" />
+          <ScalarProperty Name="appt_status_cd" ColumnName="appt_status_cd" />
+          <ScalarProperty Name="walk_in" ColumnName="walk_in" />
+          <ScalarProperty Name="AmendedTotalDue" ColumnName="AmendedTotalDue" />
+          <ScalarProperty Name="AmountDue" ColumnName="AmountDue" />
+          <ScalarProperty Name="original_bill_price" ColumnName="original_bill_price" />
+          <ScalarProperty Name="original_paid" ColumnName="original_paid" />
+          <ScalarProperty Name="Added_tests" ColumnName="Added_tests" />
+          <ScalarProperty Name="Deduct_tests" ColumnName="Deduct_tests" />
+          <ScalarProperty Name="reimbursements" ColumnName="reimbursements" />
+          <ScalarProperty Name="recon_adj" ColumnName="recon_adj" />
+          <ScalarProperty Name="original_discount" ColumnName="original_discount" />
+          <ScalarProperty Name="appointment_cell_guid" ColumnName="appointment_cell_guid" />
+          <ScalarProperty Name="order_guid" ColumnName="order_guid" />
+          <ScalarProperty Name="screening_id" ColumnName="screening_id" />
+          <ScalarProperty Name="bloodcard_requisition_number" ColumnName="bloodcard_requisition_number" />
+          <ScalarProperty Name="scantron_form" ColumnName="scantron_form" />
+          <ScalarProperty Name="Team_Comments" ColumnName="Team_Comments" />
+          <ScalarProperty Name="CStar_Participant_Guid" ColumnName="CStar_Participant_Guid" />
+          <ScalarProperty Name="ImageDescrepancyAccountedFor" ColumnName="ImageDescrepancyAccountedFor" />
+          <ScalarProperty Name="ImageDescrepancyReasonId" ColumnName="ImageDescrepancyReasonId" />
+          <ScalarProperty Name="ImageDescrepancyTechId" ColumnName="ImageDescrepancyTechId" />
+          <ScalarProperty Name="fsa_order_guid" ColumnName="fsa_order_guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Appointments_deleted">
+      <EntityTypeMapping TypeName="FSAFieldDBModel.Appointments_deleted">
+        <MappingFragment StoreEntitySet="Appointments_deleted">
+          <ScalarProperty Name="appointment_cd" ColumnName="appointment_cd" />
+          <ScalarProperty Name="appointment_number" ColumnName="appointment_number" />
+          <ScalarProperty Name="customer_uid" ColumnName="customer_uid" />
+          <ScalarProperty Name="screening_cd" ColumnName="screening_cd" />
+          <ScalarProperty Name="appt_time" ColumnName="appt_time" />
+          <ScalarProperty Name="app_slot" ColumnName="app_slot" />
+          <ScalarProperty Name="scantron" ColumnName="scantron" />
+          <ScalarProperty Name="no_show" ColumnName="no_show" />
+          <ScalarProperty Name="if_fill" ColumnName="if_fill" />
+          <ScalarProperty Name="inactive" ColumnName="inactive" />
+          <ScalarProperty Name="total_due" ColumnName="total_due" />
+          <ScalarProperty Name="paid" ColumnName="paid" />
+          <ScalarProperty Name="appt_source" ColumnName="appt_source" />
+          <ScalarProperty Name="price_sched_cd" ColumnName="price_sched_cd" />
+          <ScalarProperty Name="discount_cd" ColumnName="discount_cd" />
+          <ScalarProperty Name="appt_status_cd" ColumnName="appt_status_cd" />
+          <ScalarProperty Name="walk_in" ColumnName="walk_in" />
+          <ScalarProperty Name="AmendedTotalDue" ColumnName="AmendedTotalDue" />
+          <ScalarProperty Name="AmountDue" ColumnName="AmountDue" />
+          <ScalarProperty Name="original_bill_price" ColumnName="original_bill_price" />
+          <ScalarProperty Name="original_paid" ColumnName="original_paid" />
+          <ScalarProperty Name="Added_tests" ColumnName="Added_tests" />
+          <ScalarProperty Name="Deduct_tests" ColumnName="Deduct_tests" />
+          <ScalarProperty Name="reimbursements" ColumnName="reimbursements" />
+          <ScalarProperty Name="recon_adj" ColumnName="recon_adj" />
+          <ScalarProperty Name="original_discount" ColumnName="original_discount" />
+          <ScalarProperty Name="appointment_cell_guid" ColumnName="appointment_cell_guid" />
+          <ScalarProperty Name="order_guid" ColumnName="order_guid" />
+          <ScalarProperty Name="screening_id" ColumnName="screening_id" />
+          <ScalarProperty Name="bloodcard_requisition_number" ColumnName="bloodcard_requisition_number" />
+          <ScalarProperty Name="scantron_form" ColumnName="scantron_form" />
+          <ScalarProperty Name="Team_Comments" ColumnName="Team_Comments" />
+          <ScalarProperty Name="CStar_Participant_Guid" ColumnName="CStar_Participant_Guid" />
+          <ScalarProperty Name="ImageDescrepancyAccountedFor" ColumnName="ImageDescrepancyAccountedFor" />
+          <ScalarProperty Name="ImageDescrepancyReasonId" ColumnName="ImageDescrepancyReasonId" />
+          <ScalarProperty Name="ImageDescrepancyTechId" ColumnName="ImageDescrepancyTechId" />
+          <ScalarProperty Name="fsa_order_guid" ColumnName="fsa_order_guid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

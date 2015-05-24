@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FSAFieldDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="FSAFieldDBModelStoreContainer">
+    <EntitySet Name="Appointments" EntityType="FSAFieldDBModel.Store.Appointments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Appointments_deleted" EntityType="FSAFieldDBModel.Store.Appointments_deleted" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Appointments">
+    <Key>
+      <PropertyRef Name="appointment_cd" />
+    </Key>
+    <Property Name="appointment_cd" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="appointment_number" Type="int" />
+    <Property Name="customer_uid" Type="uniqueidentifier" />
+    <Property Name="screening_cd" Type="varchar" MaxLength="20" />
+    <Property Name="appt_time" Type="datetime" />
+    <Property Name="app_slot" Type="int" />
+    <Property Name="scantron" Type="varchar" MaxLength="20" />
+    <Property Name="no_show" Type="int" />
+    <Property Name="if_fill" Type="int" />
+    <Property Name="inactive" Type="bit" />
+    <Property Name="total_due" Type="money" />
+    <Property Name="paid" Type="money" />
+    <Property Name="appt_source" Type="varchar" MaxLength="10" />
+    <Property Name="price_sched_cd" Type="varchar" MaxLength="20" />
+    <Property Name="discount_cd" Type="varchar" MaxLength="10" />
+    <Property Name="appt_status_cd" Type="varchar" MaxLength="20" />
+    <Property Name="walk_in" Type="bit" />
+    <Property Name="AmendedTotalDue" Type="money" />
+    <Property Name="AmountDue" Type="money" />
+    <Property Name="original_bill_price" Type="money" />
+    <Property Name="original_paid" Type="money" />
+    <Property Name="Added_tests" Type="money" />
+    <Property Name="Deduct_tests" Type="money" />
+    <Property Name="reimbursements" Type="money" />
+    <Property Name="recon_adj" Type="money" />
+    <Property Name="original_discount" Type="varchar" MaxLength="10" />
+    <Property Name="appointment_cell_guid" Type="uniqueidentifier" />
+    <Property Name="order_guid" Type="uniqueidentifier" />
+    <Property Name="screening_id" Type="bigint" />
+    <Property Name="bloodcard_requisition_number" Type="varchar" MaxLength="50" />
+    <Property Name="scantron_form" Type="varchar" MaxLength="20" />
+    <Property Name="Team_Comments" Type="nvarchar" MaxLength="500" />
+    <Property Name="CStar_Participant_Guid" Type="uniqueidentifier" />
+    <Property Name="ImageDescrepancyAccountedFor" Type="bit" Nullable="false" />
+    <Property Name="ImageDescrepancyReasonId" Type="int" Nullable="false" />
+    <Property Name="ImageDescrepancyTechId" Type="int" Nullable="false" />
+    <Property Name="fsa_order_guid" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Appointments_deleted">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="appointment_cd" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="appointment_number" Type="int" />
+    <Property Name="customer_uid" Type="uniqueidentifier" />
+    <Property Name="screening_cd" Type="varchar" MaxLength="20" />
+    <Property Name="appt_time" Type="datetime" />
+    <Property Name="app_slot" Type="int" />
+    <Property Name="scantron" Type="varchar" MaxLength="20" />
+    <Property Name="no_show" Type="int" />
+    <Property Name="if_fill" Type="int" />
+    <Property Name="inactive" Type="bit" />
+    <Property Name="total_due" Type="money" />
+    <Property Name="paid" Type="money" />
+    <Property Name="appt_source" Type="varchar" MaxLength="10" />
+    <Property Name="price_sched_cd" Type="varchar" MaxLength="20" />
+    <Property Name="discount_cd" Type="varchar" MaxLength="10" />
+    <Property Name="appt_status_cd" Type="varchar" MaxLength="20" />
+    <Property Name="walk_in" Type="bit" />
+    <Property Name="AmendedTotalDue" Type="money" />
+    <Property Name="AmountDue" Type="money" />
+    <Property Name="original_bill_price" Type="money" />
+    <Property Name="original_paid" Type="money" />
+    <Property Name="Added_tests" Type="money" />
+    <Property Name="Deduct_tests" Type="money" />
+    <Property Name="reimbursements" Type="money" />
+    <Property Name="recon_adj" Type="money" />
+    <Property Name="original_discount" Type="varchar" MaxLength="10" />
+    <Property Name="appointment_cell_guid" Type="uniqueidentifier" />
+    <Property Name="order_guid" Type="uniqueidentifier" />
+    <Property Name="screening_id" Type="bigint" />
+    <Property Name="bloodcard_requisition_number" Type="varchar" MaxLength="50" />
+    <Property Name="scantron_form" Type="varchar" MaxLength="20" />
+    <Property Name="Team_Comments" Type="nvarchar" MaxLength="500" />
+    <Property Name="CStar_Participant_Guid" Type="uniqueidentifier" />
+    <Property Name="ImageDescrepancyAccountedFor" Type="bit" Nullable="false" />
+    <Property Name="ImageDescrepancyReasonId" Type="int" Nullable="false" />
+    <Property Name="ImageDescrepancyTechId" Type="int" Nullable="false" />
+    <Property Name="fsa_order_guid" Type="uniqueidentifier" />
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

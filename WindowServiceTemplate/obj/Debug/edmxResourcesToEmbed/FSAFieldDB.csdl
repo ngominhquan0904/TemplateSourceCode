@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FSAFieldDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FSAFieldDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointments" EntityType="FSAFieldDBModel.Appointment" />
+    <EntitySet Name="Appointments_deleted" EntityType="FSAFieldDBModel.Appointments_deleted" />
+  </EntityContainer>
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="appointment_cd" />
+    </Key>
+    <Property Name="appointment_cd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="appointment_number" Type="Int32" />
+    <Property Name="customer_uid" Type="Guid" />
+    <Property Name="screening_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="appt_time" Type="DateTime" Precision="3" />
+    <Property Name="app_slot" Type="Int32" />
+    <Property Name="scantron" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="no_show" Type="Int32" />
+    <Property Name="if_fill" Type="Int32" />
+    <Property Name="inactive" Type="Boolean" />
+    <Property Name="total_due" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="paid" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="appt_source" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="price_sched_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="discount_cd" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="appt_status_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="walk_in" Type="Boolean" />
+    <Property Name="AmendedTotalDue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AmountDue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="original_bill_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="original_paid" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Added_tests" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Deduct_tests" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="reimbursements" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="recon_adj" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="original_discount" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="appointment_cell_guid" Type="Guid" />
+    <Property Name="order_guid" Type="Guid" />
+    <Property Name="screening_id" Type="Int64" />
+    <Property Name="bloodcard_requisition_number" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="scantron_form" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Team_Comments" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="CStar_Participant_Guid" Type="Guid" />
+    <Property Name="ImageDescrepancyAccountedFor" Type="Boolean" Nullable="false" />
+    <Property Name="ImageDescrepancyReasonId" Type="Int32" Nullable="false" />
+    <Property Name="ImageDescrepancyTechId" Type="Int32" Nullable="false" />
+    <Property Name="fsa_order_guid" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Appointments_deleted">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="appointment_cd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="appointment_number" Type="Int32" />
+    <Property Name="customer_uid" Type="Guid" />
+    <Property Name="screening_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="appt_time" Type="DateTime" Precision="3" />
+    <Property Name="app_slot" Type="Int32" />
+    <Property Name="scantron" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="no_show" Type="Int32" />
+    <Property Name="if_fill" Type="Int32" />
+    <Property Name="inactive" Type="Boolean" />
+    <Property Name="total_due" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="paid" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="appt_source" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="price_sched_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="discount_cd" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="appt_status_cd" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="walk_in" Type="Boolean" />
+    <Property Name="AmendedTotalDue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AmountDue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="original_bill_price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="original_paid" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Added_tests" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Deduct_tests" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="reimbursements" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="recon_adj" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="original_discount" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="appointment_cell_guid" Type="Guid" />
+    <Property Name="order_guid" Type="Guid" />
+    <Property Name="screening_id" Type="Int64" />
+    <Property Name="bloodcard_requisition_number" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="scantron_form" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Team_Comments" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="CStar_Participant_Guid" Type="Guid" />
+    <Property Name="ImageDescrepancyAccountedFor" Type="Boolean" Nullable="false" />
+    <Property Name="ImageDescrepancyReasonId" Type="Int32" Nullable="false" />
+    <Property Name="ImageDescrepancyTechId" Type="Int32" Nullable="false" />
+    <Property Name="fsa_order_guid" Type="Guid" />
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

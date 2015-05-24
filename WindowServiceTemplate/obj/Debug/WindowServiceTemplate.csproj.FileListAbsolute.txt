@@ -1,0 +1,15 @@
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\WindowServiceTemplate.exe.config
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\obj\Debug\WindowServiceTemplate.csprojResolveAssemblyReference.cache
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\WindowServiceTemplate.exe
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\WindowServiceTemplate.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\EDIParser.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\EntityFramework.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\ServiceStack.Interfaces.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\ServiceStack.Logging.NLog.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\ServiceStack.Text.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\EntityFramework.xml
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\obj\Debug\WindowServiceTemplate.MsgResource.resources
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\obj\Debug\WindowServiceTemplate.csproj.GenerateResource.Cache
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\obj\Debug\WindowServiceTemplate.exe
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\obj\Debug\WindowServiceTemplate.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\FtpFileManager.dll

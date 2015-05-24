@@ -1,0 +1,7 @@
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WCFRestFullTemplate\bin\WCFRestFullTemplate.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WCFRestFullTemplate\bin\WCFRestFullTemplate.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WCFRestFullTemplate\obj\Debug\WCFRestFullTemplate.csprojResolveAssemblyReference.cache
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WCFRestFullTemplate\obj\Debug\WCFRestFullTemplate.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WCFRestFullTemplate\obj\Debug\WCFRestFullTemplate.pdb
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WCFRestFullTemplate\bin\Newtonsoft.Json.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WCFRestFullTemplate\bin\Newtonsoft.Json.xml

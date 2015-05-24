@@ -4,3 +4,9 @@ E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTempl
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\obj\Debug\DesignPatternTemplate.csprojResolveAssemblyReference.cache
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\obj\Debug\DesignPatternTemplate.exe
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\obj\Debug\DesignPatternTemplate.pdb
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\bin\Debug\DesignPatternTemplate.exe.config
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\obj\Debug\DesignPatternTemplate.exe
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\obj\Debug\DesignPatternTemplate.pdb
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\bin\Debug\DesignPatternTemplate.exe
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\bin\Debug\DesignPatternTemplate.pdb
+D:\Project\General\TemplateSourceCode\TemplateSourceCode\DesignPatternTemplate\obj\Debug\DesignPatternTemplate.csprojResolveAssemblyReference.cache

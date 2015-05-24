@@ -9,5 +9,3 @@ E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\bin
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\obj\Debug\CsharpTemplate.csprojResolveAssemblyReference.cache
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\obj\Debug\CsharpTemplate.exe
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\obj\Debug\CsharpTemplate.pdb
-E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\bin\Debug\EntityFramework.dll
-E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\CsharpTemplate\bin\Debug\EntityFramework.xml

@@ -129,15 +129,17 @@ namespace CsharpTemplate
 
         #endregion
 
-        static Func<int> Natural()
+        #region Lambda Expression
+
+        private static Func<int> Natural()
         {
 //            int seed = 0;
 //            return () => seed++;
-            
+
             return () =>
             {
                 int seed = 0;
-               return seed++;
+                return seed++;
             };
         }
 
@@ -147,5 +149,31 @@ namespace CsharpTemplate
             Console.WriteLine(natural());
             Console.WriteLine(natural());
         }
+
+        public void LambdaExpression1()
+        {
+            Action[] actions = new Action[3];
+            int i = 0;
+            foreach (char c in "abc")
+            {
+                actions[i++] = () => Console.WriteLine(c);
+            }
+            foreach (Action action in actions)
+            {
+                action();
+            }
+            //Action[] actions1 = new Action[3];
+            //for (int j = 0; j < 3; j++)
+            //{
+            //    actions1[j] = () => Console.WriteLine(j);
+            //}
+            //foreach (var action1 in actions1)
+            //{
+            //    action1();
+            //}
+            
+        }
+        #endregion
+      
     }
 }

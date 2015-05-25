@@ -69,7 +69,8 @@ namespace CsharpTemplate
 //            x.BaseEvent();
             //
 //            x.LambdaExpression();
-           x.LambdaExpression1();
+//           x.LambdaExpression1();
+            x.DynamicTypeTemp();
       Console.ReadLine();
 
         }

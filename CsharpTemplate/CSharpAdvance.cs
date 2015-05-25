@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
@@ -174,6 +175,24 @@ namespace CsharpTemplate
             
         }
         #endregion
-      
+        #region Dynamic type
+
+        public dynamic y;
+
+        public void DynamicTypeTemp()
+        {
+            dynamic a = 1;
+            Console.WriteLine(a);
+            a = new string[0];
+            Console.WriteLine(a);
+            a = Test();
+            Console.WriteLine(a);
+        }
+
+        public dynamic Test()
+        {
+            return 10;
+        }
+        #endregion
     }
 }

@@ -13,3 +13,11 @@ E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTempl
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\obj\Debug\WindowServiceTemplate.exe
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\obj\Debug\WindowServiceTemplate.pdb
 E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\FtpFileManager.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\Autofac.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\Autofac.xml
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\NLog.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\NLog.xml
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\ServiceStack.Common.dll
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\ServiceStack.Common.xml
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\ServiceStack.Interfaces.xml
+E:\Quan\Project\General\TemplateSourceCode\TemplateSourceCode\WindowServiceTemplate\bin\Debug\ServiceStack.Text.xml

@@ -21,6 +21,7 @@ namespace WindowServiceTemplate
 //        private readonly string to = ConfigurationManager.AppSettings["DefaultToEmail"];
 //        private const string Subject = "HL7 Edi Job service";
         private  ILog log;
+        private  ILog logAppointment;
         private  IEdiFtpService ftpService;
 //        private readonly IEdiService ediService;
 //        private readonly IEdiEmailService emailService;
@@ -28,7 +29,8 @@ namespace WindowServiceTemplate
         public Service1(ILogFactory _log)
         {
             InitializeComponent();
-            this.log = _log.GetLogger(typeof (Service1));
+            this.log = _log.GetLogger("task1Logger");
+            this.logAppointment = _log.GetLogger("task2Logger");
             TestLog();
         }
 
@@ -44,37 +46,39 @@ namespace WindowServiceTemplate
 
         public void TestLog()
         {
-            // Step 1. Create configuration object 
-            var config = new LoggingConfiguration();
-
-            // Step 2. Create targets and add them to the configuration 
-            var consoleTarget = new ColoredConsoleTarget();
-            config.AddTarget("console", consoleTarget);
-
-            var fileTarget = new FileTarget();
-            config.AddTarget("file", fileTarget);
-
-            // Step 3. Set target properties 
-            consoleTarget.Layout = @"${date:format=HH\\:MM\\:ss} ${logger} ${message}";
-            fileTarget.FileName = "${basedir}/file.txt";
-            fileTarget.Layout = "${message}";
-
-            // Step 4. Define rules
-            var rule1 = new LoggingRule("*", LogLevel.Debug, consoleTarget);
-            config.LoggingRules.Add(rule1);
-
-            var rule2 = new LoggingRule("*", LogLevel.Debug, fileTarget);
-            config.LoggingRules.Add(rule2);
-
-            // Step 5. Activate the configuration
-            NLog.LogManager.Configuration = config;
-            // Example usage
-            var logger = LogManager.GetLogger("Example");
-            logger.Debug("debug log message");
-            logger.Info("info log message");
-            logger.Warn("warn log message");
-            logger.Error("error log message");
-            logger.Fatal("fatal log message");
+//            // Step 1. Create configuration object 
+//            var config = new LoggingConfiguration();
+//
+//            // Step 2. Create targets and add them to the configuration 
+//            var consoleTarget = new ColoredConsoleTarget();
+//            config.AddTarget("console", consoleTarget);
+//
+//            var fileTarget = new FileTarget();
+//            config.AddTarget("file", fileTarget);
+//
+//            // Step 3. Set target properties 
+//            consoleTarget.Layout = @"${date:format=HH\\:MM\\:ss} ${logger} ${message}";
+//            fileTarget.FileName = "${basedir}/file.txt";
+//            fileTarget.Layout = "${message}";
+//
+//            // Step 4. Define rules
+//            var rule1 = new LoggingRule("*", LogLevel.Debug, consoleTarget);
+//            config.LoggingRules.Add(rule1);
+//
+//            var rule2 = new LoggingRule("*", LogLevel.Debug, fileTarget);
+//            config.LoggingRules.Add(rule2);
+//
+//            // Step 5. Activate the configuration
+//            NLog.LogManager.Configuration = config;
+//            // Example usage
+//            var logger = LogManager.GetLogger("Example");
+//            logger.Debug("debug log message");
+//            logger.Info("info log message");
+//            logger.Warn("warn log message");
+//            logger.Error("error log message");
+//            logger.Fatal("fatal log message");
+            log.Info("this is task1");
+            logAppointment.Info("this is task2");
         }
         public void StartGenAppointmentList()
         {

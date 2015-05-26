@@ -5,6 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 using Autofac;
+using Utility;
 
 namespace WindowServiceTemplate
 {
@@ -15,17 +16,22 @@ namespace WindowServiceTemplate
         /// </summary>
         static void Main()
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<Service1>();
-            var container = builder.RegisterDependencies();
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[] 
-            { 
-                container.Resolve<Service1>()
-            };
-            ServiceBase.Run(ServicesToRun);
+//            var builder = new ContainerBuilder();
+//            builder.RegisterType<Service1>();
+//            var container = builder.RegisterDependencies();
+//            ServiceBase[] ServicesToRun;
+//            ServicesToRun = new ServiceBase[] 
+//            { 
+//                container.Resolve<Service1>()
+//            };
+//            ServiceBase.Run(ServicesToRun);
 //            Service1 s = new Service1();
 //            s.StartGenAppointmentList();
+            ExcelTemplate test = new ExcelTemplate();
+            test.CreateNewFileExcel();
+//            test.ReadFileExcel();
+            Console.WriteLine();
+//            Console.ReadLine();
         }
     }
 }
